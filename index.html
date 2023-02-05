@@ -27,10 +27,38 @@
     <main>
       <section id="hero">
         <h2>Hero</h2>
-        <p>
-          El hero tiene que ser un carrusel dinámico de imágenes 
-          (3 como mínimo) que ocupe el 100% de la pantalla.
-        </p>
+        <div class="carousel">
+             <button class="carousel__button carousel__button--left is-hidden">
+                <img src="img/left.svg" alt="">
+             </button>
+             <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel__image" src="img/slide1.png" 
+                             alt="">         
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="img/slide2.png"
+                             alt=""> 
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="img/slide3.png" 
+                        alt="">
+                    </li>
+                </ul>
+             </div>
+             <button class="carousel__button carousel__button--right">
+                <img src="img/right.svg" alt="">
+             </button>
+
+             <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+             </div>
+        </div>
+        <br>
+          
       </section>
 
       <section id="experience">
@@ -101,5 +129,6 @@
     <footer>
       <p>Copyright &copy; 2023 Marcel Vallejo </p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
