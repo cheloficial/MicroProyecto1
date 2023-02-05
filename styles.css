@@ -64,6 +64,12 @@ h3 {
   margin: 0;
 }
 
+h4 {
+    font-size:large;
+    color: white;
+    margin: 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -76,6 +82,13 @@ p {
 
 li {
   color: rgb(223, 221, 221);
+  margin-left: 20px;
+}
+
+a {
+  color: white;
+  font-size:medium;
+
 }
 
 footer {
@@ -167,4 +180,36 @@ footer {
     display : none;
 }
 
+.sbs__container{
+    display: flex;
+    /* background: lightgreen; */
+}
+
+.image__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
+  .image__container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+.text__container{
+    flex: 1;
+    max-width: 50%;
+    min-width: 50%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__container--right{
+    text-align: justify;
+    margin: 10px;
+}
+
+    
