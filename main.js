@@ -87,3 +87,46 @@ nav.addEventListener('click', e => {
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
+
+//SKILLS
+fetch('skills.json')
+  .then(response => response.json())
+  .then(data => {
+    // Create the HTML for the skills section
+    let skillsHTML1 = '';
+    let skillsHTML2 = '';
+    data.skills.forEach((skill, index) => {
+      let width;
+      switch (skill.level) {
+        case "Expert":
+          width = 100;
+          break;
+        case "Advanced":
+          width = 75;
+          break;
+        case "Intermediate":
+          width = 50;
+          break;
+        case "Beginner":
+          width = 25;
+          break;
+      }
+      let skillsHTML = `
+        <div class="skill">
+          <h3>${skill.name}</h3>
+          <div class="bar">
+            <span style="width: ${width}%"></span>
+          </div>
+        </div>
+      `;
+      if (index % 2 === 0) {
+        skillsHTML1 += skillsHTML;
+      } else {
+        skillsHTML2 += skillsHTML;
+      }
+    });
+
+    // Add the skills HTML to the page
+    document.querySelector('.skill-column:first-child').innerHTML = skillsHTML1;
+    document.querySelector('.skill-column:last-child').innerHTML = skillsHTML2;
+  });
