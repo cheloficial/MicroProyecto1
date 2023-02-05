@@ -171,7 +171,6 @@ footer {
     cursor: pointer;
 }
 
-/* indicates what slide were on by making it ligther */
 .carousel__indicator.current-slide{
     background: white;
 }
@@ -180,6 +179,7 @@ footer {
     display : none;
 }
 
+/* EXPERIENCE */
 .sbs__container{
     display: flex;
     /* background: lightgreen; */
@@ -212,4 +212,37 @@ footer {
     margin: 10px;
 }
 
+/* SKILLS */
+.skills {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skill-column {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .skill h3 {
+    margin-bottom: 10px;
+  }
+
+  .skill .bar {
+    height: 20px;
+    width: 100px;
+    border: 1px solid whitesmoke;
+  }
+
+  .skill .bar span {
+    display: block;
+    height: 100%;
+    background-color:  rgb(64, 131, 198);
+  }
     
