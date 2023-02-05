@@ -245,4 +245,63 @@ footer {
     height: 100%;
     background-color:  rgb(64, 131, 198);
   }
-    
+
+  /* CONTACTME */
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-form > * {
+    margin: 1rem 0;
+  }
+
+  #contact-form .form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #contact-form label {
+    width: 10%;
+    text-align: right;
+    padding-right: 1rem;
+    color: white;
+  }
+
+  #contact-form input[type="text"],
+  #contact-form input[type="email"] {
+    width: 70%;
+  }
+
+  #contact-form textarea {
+    width: 70%;
+    height: 10rem;
+  }
+
+  #contact-form button[type="submit"] {
+    width: 100px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .social-media-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-media-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .social-media-link {
+    text-decoration: none;
+    color: white;
+  }
