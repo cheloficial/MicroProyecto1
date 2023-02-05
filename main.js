@@ -130,3 +130,38 @@ fetch('skills.json')
     document.querySelector('.skill-column:first-child').innerHTML = skillsHTML1;
     document.querySelector('.skill-column:last-child').innerHTML = skillsHTML2;
   });
+
+//CONTACTME
+const form = document.querySelector("#contact-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const message = messageInput.value;
+
+  if (!name || !email || !message) {
+    alert('All fields are required.');
+    return;
+  }
+
+  if (/[^a-zA-Z ]/.test(name)) {
+    alert("Name cannot contain special characters.");
+    return;
+  }
+
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    alert("Email is invalid.");
+    return;
+  }
+  if (message.length > 250) {
+    alert("Message cannot be longer than 250 words.");
+    return;
+  }
+  
+  alert(`Your request has been sent\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+});
